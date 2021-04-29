@@ -37,3 +37,20 @@ return(
                </nav>
     )
 }
+
+// import React from "react";
+// import "./NavBar.css";
+
+
+// export const  NavBar = (props) => {
+// return (
+
+//     <div className= "sidenav">
+//         <a href= "#section">Home</a>
+//         <a href= "#section">Profile</a>
+//         <a href="#section">Milestones</a>
+//     </div>
+
+// );
+// };
+

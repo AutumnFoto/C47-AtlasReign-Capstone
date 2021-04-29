@@ -1,13 +1,13 @@
-.navbar {
+ .navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #1DCFD2;
+    background-color: #D8B399;
     width: 100%;
-    /* float: right; */
+    float: right;
     text-align: right;
-}
+} 
 
 .nav-item {
     display: inline-block;
@@ -20,12 +20,20 @@
   .navLink {
     color: white;
   }
-  
-  /* #logo {
-    position:absolute;
-    top: 0;
-    left:0;
-    width: 125px;
-    margin-top: 2px;
-    margin-left: 2px;
-  } */
+ 
+
+   /* .sideNav{
+   height: 100%;  
+   width: 25%;  
+   position: fixed; 
+   z-index: 1; 
+   top: 0; 
+   left: 0; 
+   background-color:#232323; transition: .5s ease; 
+   overflow-x: hidden;  
+   padding-top: 20px;  
+   display: flex; 
+   flex-direction: column; align-items: center;
+   } */
+
+   

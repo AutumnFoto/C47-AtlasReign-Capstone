@@ -1,16 +1,17 @@
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import { ApplicationViews } from "../components/ApplicationViews";
 import { Login } from "../components/auth/Login";
 import { Register } from "../components/auth/Register";
-import { Route, Redirect } from "react-router-dom";
 import './AtlasReign.css';
 import { NavBar } from "../components/nav/NavBar";
-import { ApplicationViews } from "../components/ApplicationViews";
 
 export const AtlasReign = () => {
   return (
     <>
     <Route
       render={() => {
-        if (sessionStorage.getItem("atlasreign_user")) {
+        if (sessionStorage.getItem("atlasreign_id")) {
           return (
             <>
               <NavBar />

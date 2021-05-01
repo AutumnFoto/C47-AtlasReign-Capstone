@@ -7,7 +7,6 @@
     overflow: hidden;
     width: 7cm;
     height: 7cm;
-    flex-wrap: wrap;
 }
 
   img{
@@ -17,15 +16,12 @@
       margin-left: 1cm;
   }
 
-.profile_name{
+.profile_name, .profile_dob{
     text-align: center;
 }
 
-
-
 .container-profilecards{
     background-color: #FFFBF4;
-    flex-wrap: wrap;
 }
 
 .profilesection-content{

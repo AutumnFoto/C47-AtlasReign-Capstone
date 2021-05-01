@@ -1,6 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom";
-import {ProfileCard} from "../components/profile/ProfileCard";
+import {ProfileList} from "../components/profile/ProfileList";
 
 
 export const ApplicationViews = () => {
@@ -12,7 +12,7 @@ export const ApplicationViews = () => {
             </Route>
 
             <Route path= "/profiles">
-                <ProfileCard />
+                <ProfileList />
             </Route>
 
         

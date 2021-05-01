@@ -1,15 +1,18 @@
 import React from 'react';
 import "./ProfileCard.css";
 
-export const ProfileCard = ({profiles}) => {
+
+export const ProfileCard = ({profile}) => {
     return(
         <div className="profile_card">
             <div className= "profilecard-content">
-                <img src= {profiles.image} alt="profilepic"/>
-                <h3 className="profile_name">Name {profiles.name}</h3>
+                <img src= {profile.imageURL} alt="profilepic"/>
+                <h3 className="profile_name">Name:{profile.name}</h3>
+                <div className="profile_dob">DOB:{profile.dob}</div>
 
-                <button type="edit">Edit</button>
+                <button type="button" className="button">Edit</button>
             </div>
         </div>
+
     )
 }

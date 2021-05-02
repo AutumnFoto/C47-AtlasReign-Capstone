@@ -1,12 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router';
 import {addProfile, getAllProfiles} from "../../modules/ProfileDataManager";
+// import {getAllUsers} from "../../modules/UserDataManager";
+import "./ProfileForm.css"
 
-export const ProfileFrom = () => {
+export const ProfileForm = () => {
+
+    const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
+
     const [profile, setProfile] = useState({
         name:"",
         dob:"",
-        image: ""
+        image: "",
+        userId: parseInt(currentUser)
     });
 
     const [isLoading, setIsLoading] = useState(false);
@@ -24,33 +30,58 @@ export const ProfileFrom = () => {
         setProfile(newProfile)
     }
 
+    useEffect(() => {
+
+    }, []);
+
     const handleClickSaveProfile = (event) => {
         event.preventDefault()
 
-        const saveInputValue= profile.name;
-        getAllProfiles()
-        .then(users=> {
-            const userObj= user.find(user => user.name.toLowerCase() === saveInputValue.toLowerCase());
-            if(userObj === undefined) {
-                window.alert("please select an existing user")
-                return history.push('/profiles')
-            }
+        const newProfileObject = {
+            name: profile.name,
+            dob:profile.dob,
+            image: profile.imageUrl,
+            userId: profile.userId
+        }
+        addProfile(newProfileObject)
+        .then(() => history.push("/profiles"))
 
-            const newProfilePage = {
-                userId: userObj.id,
-                currentUserId: parseInt(sessionsStorage.getItem("atlasreign_user"))
+   }
 
-            }
+    return(
+        <form className ="profileForm">
+            <h2 className ="profileForm__title">New Profile</h2>
+            <fieldset>
+                <div className="form-group">
+                    <label  htmlFor="name"> Child's Name:</label>
+                    <input type="text" id='name' onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder= "Child's name" 
+                    value= {profile.name} />
+                </div>
+            </fieldset>
 
-            getAllProfiles()
-            .then(profiles => {
-                const currentProfile = profiles.find(profile => profile.userId === newProfilePage.userId);
+            <fieldset>
+                <div className= "form-group">
+                    <label htmlFor= "dob">DOB:</label>
+                    <input type = "text" id="dob" onChange={handleControlledInputChange} required autoFocus
+                    className="form-control"
+                    placeholder="childs dob"
+                    value={profile.dob} />
+                </div>
+            </fieldset>
 
-                if(currentPage)
-                (stopped)
-            })
-        })
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor= "image">Image:</label>
+                    <input text="text" id="image"
+                    onChange={handleControlledInputChange}
+                    required autoFocus
+                    className="form-control"
+                    placeholder="image"
+                    value= {profile.imageUrl} />
+                </div>
+            </fieldset>
+            <button type= "button" className="btn btn-primary" onClick={handleClickSaveProfile}>Save Profile</button>
+        </form>
+    )
+
     }
-
-
-}

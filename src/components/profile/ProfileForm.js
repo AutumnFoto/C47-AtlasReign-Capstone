@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router';
-import {addProfile, getAllProfiles} from "../../modules/ProfileDataManager";
-// import {getAllUsers} from "../../modules/UserDataManager";
+import {addProfile} from "../../modules/ProfileDataManager";
 import "./ProfileForm.css"
 
 export const ProfileForm = () => {

@@ -1,20 +1,37 @@
 import React, {useState, useEffect} from 'react';
 import {ProfileCard} from "./ProfileCard";
-import {useHistory} from "react-router-dom";
-import {getAllProfiles} from "../../modules/ProfileDataManager";
+import { updateProfile, getUserProfiles } from "../../modules/ProfileDataManager";
+import { useHistory } from 'react-router';
 
 
 export const ProfileList = () => {
+
+    const currentUser = JSON.parse(sessionStorage.getItem("atlasreign_id"))
+
     const [profiles, setProfiles] = useState([]);
 
-    const history= useHistory();
-
     const getProfiles = () => {
-        return getAllProfiles() 
-        .then(profilesFromAPI => {
-            setProfiles(profilesFromAPI)
+        return getUserProfiles(currentUser) 
+        .then(currentProfiles => {
+            setProfiles(currentProfiles)
         });
     };
+
+    const handleUpdateProfile= (profile) => {
+        let updatedProfile= {...profile}
+        const editProfileUpdate= {
+            id: updatedProfile.id,
+            name: updatedProfile.name, 
+            dob: updatedProfile.dob, 
+            image: updatedProfile.imageUrl,
+            userId: currentUser
+        }
+
+        updateProfile(editProfileUpdate)
+        .then(() => getProfiles())
+    }
+
+    const history= useHistory();
 
     useEffect(() => {
         getProfiles();
@@ -23,14 +40,16 @@ export const ProfileList = () => {
 return(
     <>
     <section className= "profilesection-content">
-        <button type= "button" className="btn"
-        onClick={()=> {history.push("/profiles/create")}}> Add Profile</button>
+        <button type= "button" className="btn-primary"
+        // eslint-disable-next-line no-restricted-globals
+        onClick={() => { history.push("/profiles/create")}}> Add Profile</button>
     </section>
     <div className="container-profilecards">
         {profiles.map(profile => 
             <ProfileCard
             key={profile.id}
             profile={profile}
+            handleUpdateProfile={handleUpdateProfile} 
            
             /> 
             

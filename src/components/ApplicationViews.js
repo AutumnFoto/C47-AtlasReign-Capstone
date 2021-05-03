@@ -2,6 +2,7 @@ import React from "react"
 import { Route } from "react-router-dom";
 import {ProfileList} from "../components/profile/ProfileList";
 import {ProfileForm} from "./profile/ProfileForm";
+import {ProfileEditForm} from "./profile/ProfileEditForm";
 
 
 export const ApplicationViews = () => {
@@ -12,13 +13,21 @@ export const ApplicationViews = () => {
                 {/* render component for home */}
             </Route>
 
-            <Route path= "/profiles">
+            <Route exact path= "/profiles">
                 <ProfileList />
             </Route>
 
-        <Route path="/profiles/create">
+        <Route exact path="/profiles/create">
             <ProfileForm />
         </Route>
+
+        <Route exact path= "/profiles/:profileId(\d+)/edit">
+            <ProfileEditForm />
+        </Route>
+
+
+
+
         </>       
     ) 
 

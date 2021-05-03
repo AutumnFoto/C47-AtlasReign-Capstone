@@ -20,3 +20,9 @@
   .navLink {
     color: white;
   }
+
+  .logo{
+    height: 5cm;
+    width: 5cm;
+    padding: 1px 700px
+  }

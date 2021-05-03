@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {ProfileCard} from "./ProfileCard";
 import { updateProfile, getUserProfiles } from "../../modules/ProfileDataManager";
 import { useHistory } from 'react-router';
+import "./ProfileList.css";
 
 
 export const ProfileList = () => {
@@ -40,7 +41,7 @@ export const ProfileList = () => {
 return(
     <>
     <section className= "profilesection-content">
-        <button type= "button" className="btn-primary"
+        <button type= "button" className="addprofile-btn"
         // eslint-disable-next-line no-restricted-globals
         onClick={() => { history.push("/profiles/create")}}> Add Profile</button>
     </section>

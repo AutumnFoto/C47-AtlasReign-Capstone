@@ -1,7 +1,7 @@
 import React from "react";
 import {Link, useHistory} from "react-router-dom";
 import "../nav/NavBar.css";
-// import images
+import logo from "../../images/logo.png" ;
 
 export const NavBar =( props) => {
 
@@ -14,7 +14,9 @@ export const NavBar =( props) => {
 
 return(
         <nav className= "nav-container">
-
+<div>
+    <img className="logo" src={logo} alt="logo"/>
+</div>
             <ul className= "navbar">
                 <li className= "nav-item">
                     <Link className= "nav-link" to="/">Home</Link>

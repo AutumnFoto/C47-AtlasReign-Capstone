@@ -24,7 +24,7 @@ export const addEat =(newEat) => {
 }
 
 export const updateEat= (editedEat) => {
-    return fetch(`${remoteURL}/`, 
+    return fetch(`${remoteURL}/eat/${editedEat.id}`, 
     {
         method: "PUT",
         headers: {

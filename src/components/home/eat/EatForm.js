@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import {addEat} from "../../../modules/HomeDataManager";
-import { EatCard } from './EatCard';
 import "./EatForm.css";
 
 export const EatForm = () => {

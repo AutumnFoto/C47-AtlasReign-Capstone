@@ -34,6 +34,11 @@ export const updateEat= (editedEat) => {
     }).then(response => response.json())
 }
 
+export const getUserEat= (userId) => {
+    return fetch(`${remoteURL}/eat?userId=${userId}&_expand=user`)
+    .then(response => response.json())
+}
+
 // --------------------------//
 
 // ----- sleep data--------//
@@ -72,6 +77,10 @@ export const updateSleep= (editedSleep) => {
     }).then(response => response.json())
 }
 
+export const getUserSleep= (userId) => {
+    return fetch(`${remoteURL}/sleep?userId=${userId}&_expand=user`)
+    .then(response => response.json())
+}
 // -------------------------------//
 
 // ------diaper data-----------//
@@ -109,6 +118,10 @@ export const updateDiaper= (editedDiaper) => {
     }).then(response => response.json())
 }
 
+export const getUserDiaper= (userId) => {
+    return fetch(`${remoteURL}/diaper?userId=${userId}&_expand=user`)
+    .then(response => response.json())
+}
 // -------------------------------//
 
 // ------activity data-----------//
@@ -144,6 +157,11 @@ export const updateActivity= (editedActivity) => {
         },
         body:JSON.stringify(editedActivity)
     }).then(response => response.json())
+}
+
+export const getUserActivity= (userId) => {
+    return fetch(`${remoteURL}/activity?userId=${userId}&_expand=user`)
+    .then(response => response.json())
 }
 
 // ---------------------------------//

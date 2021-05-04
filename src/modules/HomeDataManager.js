@@ -1,7 +1,7 @@
 const remoteURL= "http://localhost:8808"
 
 // --------------eat data-------------//
-export const getEatbyId = (id) => {
+export const getEatById = (id) => {
     return fetch(`${remoteURL}/eat/${id}`)
     .then(response => response.json())
 }
@@ -24,7 +24,7 @@ export const addEat =(newEat) => {
 }
 
 export const updateEat= (editedEat) => {
-    return fetch(`${remoteURL}/eat/${editedEat.id}`, 
+    return fetch(`${remoteURL}/`, 
     {
         method: "PUT",
         headers: {

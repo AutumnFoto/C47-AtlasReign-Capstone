@@ -13,20 +13,33 @@ import {HomeButtons} from "./home/buttons";
 import {SleepList} from "./home/sleep/SleepList";
 import {SleepForm} from "./home/sleep/SleepForm";
 import {SleepEditForm} from "./home/sleep/SleepEditForm";
+import {DiaperList} from "./home/diaper/DiaperList";
+import {DiaperForm} from "./home/diaper/DiaperForm";
+import {DiaperEditForm} from "./home/diaper/DiaperEditForm";
+import { DiaperCard } from "./home/diaper/DiaperCard";
 
 export const ApplicationViews = () => {
 
     return (
         <>
             <Route exact path="/">
-              <HomeButtons />
-              <EatList />
-            <ActivityList/>
-            <SleepList />
+                <HomeButtons />
+                <EatList />
+                <ActivityList/>
+                 <SleepList />
+                 <DiaperList />
+             </Route>
 
+
+             <Route exact path= "/diaper/create">
+                <DiaperForm />
             </Route>
 
-            <Route exact path= "/sleep/create">
+            <Route exact path= "/diaper/:diaperId(\d+)/edit">
+                <DiaperEditForm />
+            </Route>
+
+         <Route exact path= "/sleep/create">
                 <SleepForm />
             </Route>
 

@@ -1,22 +1,15 @@
 .eat_card {
-    background-color: #ffff;
+    background-color: #f5d7e8;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
     border-radius: 5px;
     margin-bottom: 1em;
-    flex: 0 1 24%;
-    overflow: hidden;
-    width: 11cm;
-    height: 12cm;
+    margin-left: 0cm;
+    width: 13cm;
+    height: 5cm;
+
     
 }
 
-  img{
-      width: 70%;
-      height: 70%;
-      border-radius: 40cm;
-      margin-left: 1cm;
-  }
 
 
 .container-eatcards{

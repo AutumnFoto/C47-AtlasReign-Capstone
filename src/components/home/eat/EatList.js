@@ -45,12 +45,8 @@ export const EatList = () => {
 
 return(
     <>
-    <section className= "eatsection-content">
-        <button type="button" className="addeat-btn" onClick={() => 
-            {history.push("eat/create")}}> Eat</button>
-    </section>
 
-    <div className="conatiner-eatcards">
+    <div className="container-eatcards">
         {eat.map(eat =>
         <EatCard
         key={eat.id}

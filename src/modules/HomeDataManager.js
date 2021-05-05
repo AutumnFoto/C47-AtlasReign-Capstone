@@ -137,6 +137,11 @@ export const getActivitybyId = (id) => {
     .then(response => response.json())
 }
 
+export const getAllActivities= () => {
+    return fetch(`${remoteURL}/activity?_expand=user`)
+    .then(result=> result.json())
+}
+
 export const deleteActivity= (id) =>{
 return fetch(`${remoteURL}/activity/${id}`, {
     method: "DELETE"
@@ -155,7 +160,7 @@ export const addActivity =(newActivity) => {
 }
 
 export const updateActivity= (editedActivity) => {
-    return fetch(`${remoteURL}/eat/${editedActivity.id}`, 
+    return fetch(`${remoteURL}/activity/${editedActivity.id}`, 
     {
         method: "PUT",
         headers: {

@@ -6,6 +6,9 @@ import {ProfileEditForm} from "./profile/ProfileEditForm";
 import {EatList} from "../components/home/eat/EatList";
 import {EatForm} from "./home/eat/EatForm";
 import {EatEditForm} from "./home/eat/EatEditForm";
+import {ActivityList} from "./home/activity/ActivityList";
+import {ActivityForm} from "./home/activity/ActivityForm";
+import {ActivityEditForm} from "./home/activity/ActivityEditForm";
 
 export const ApplicationViews = () => {
 
@@ -13,6 +16,10 @@ export const ApplicationViews = () => {
         <>
             <Route exact path="/">
               <EatList />
+            </Route>
+
+            <Route exact path="/">
+               <ActivityList/>
             </Route>
 
             <Route exact path= "/eat/create">
@@ -23,9 +30,15 @@ export const ApplicationViews = () => {
                 <EatEditForm />
             </Route>
 
+            <Route exact path= "/activity/create">
+                <ActivityForm />
+            </Route>
 
+            <Route exact path= "/activity/:activityId(\d+)/edit">
+                <ActivityEditForm />
+            </Route>
 
-         <Route exact path= "/profiles">
+          <Route exact path= "/profiles">
                 <ProfileList />
             </Route>
 

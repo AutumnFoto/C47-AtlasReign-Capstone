@@ -3,7 +3,7 @@ import {Link, useHistory} from "react-router-dom";
 import "../nav/NavBar.css";
 import logo from "../../images/logo.png" ;
 
-export const NavBar =( props) => {
+export const NavBar =() => {
 
     const history= useHistory();
 

@@ -30,11 +30,9 @@ return(
                     <Link className= "nav-link" to ="/milestones">Milstones</Link>
                 </li>
 
-                    <li className="nav-item">
-                        <button type= "button" className="btn btn-primary" onClick={handleLogout}>
-                            Logout
-                        </button>
-                    </li>
+                <li className="nav-item">
+          <Link className="nav-link" onClick={handleLogout} to="/login"> Logout </Link>
+        </li>
                 </ul>
                </nav>
     )

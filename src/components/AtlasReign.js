@@ -6,6 +6,8 @@ import { Register } from "../components/auth/Register";
 import './AtlasReign.css';
 import { NavBar } from "../components/nav/NavBar";
 
+
+
 export const AtlasReign = () => {
   return (
     <>

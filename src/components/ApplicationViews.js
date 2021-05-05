@@ -9,17 +9,16 @@ import {EatEditForm} from "./home/eat/EatEditForm";
 import {ActivityList} from "./home/activity/ActivityList";
 import {ActivityForm} from "./home/activity/ActivityForm";
 import {ActivityEditForm} from "./home/activity/ActivityEditForm";
+import {HomeButtons} from "./home/buttons";
 
 export const ApplicationViews = () => {
 
     return (
         <>
             <Route exact path="/">
+              <HomeButtons />
               <EatList />
-            </Route>
-
-            <Route exact path="/">
-               <ActivityList/>
+            <ActivityList/>
             </Route>
 
             <Route exact path= "/eat/create">

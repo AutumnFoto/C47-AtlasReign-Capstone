@@ -43,10 +43,10 @@ useEffect(() => {
 
 return(
     <>
-    <section className="activitysection-content">
+    {/* <section className="activitysection-content">
         <button type="button" className= "addactivity-btn" onClick={() =>{history.push("activity/create")}}> Activity
   </button>
-    </section>
+    </section> */}
 
     <div className="container-activitycards">
         {activity.map(activity => 

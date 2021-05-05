@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {EatCard} from "./EatCard";
-import {updateEat, getUserEat } from "../../../modules/HomeDataManager";
+import {updateEat, getAllEat, deleteEat } from "../../../modules/HomeDataManager";
 import {useHistory} from "react-router-dom";
 import "./EatList.css";
 
@@ -10,14 +10,21 @@ export const EatList = () => {
     const [eat, setEat] = useState([]);
 
     const getEat= () => {
-        return  getUserEat(currentUser)
-        .then(currentEat => {
-            setEat(currentEat)
+        return getAllEat()
+        .then(eatFromAPI => {
+            setEat(eatFromAPI)
         });
     };
-
+    const history= useHistory();
+    
+    const handleDeleteEat= id => {
+        deleteEat(id)
+        .then(() => getAllEat()).then(setEat)
+    }
     const handleUpdateEat= (eat) => {
+
         let updatedEat= {...eat}
+
         const editEatUpdate= {
             id: updatedEat.id,
             food: updatedEat.food,
@@ -30,7 +37,6 @@ export const EatList = () => {
         .then(() => getEat())
     }
 
-    const history= useHistory();
 
     useEffect(() => {
         getEat();
@@ -41,19 +47,20 @@ return(
     <>
     <section className= "eatsection-content">
         <button type="button" className="addeat-btn" onClick={() => 
-            
-            {history.push("/eat/create")}}> Eat</button>
+            {history.push("eat/create")}}> Eat</button>
     </section>
+
     <div className="conatiner-eatcards">
         {eat.map(eat =>
         <EatCard
         key={eat.id}
         eat={eat}
         handleUpdateEat={handleUpdateEat}
+        handleDeleteEat= {handleDeleteEat}
         />
             )}
     </div>
     </>
 );
-}
+};
 

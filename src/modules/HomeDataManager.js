@@ -1,6 +1,12 @@
-const remoteURL= "http://localhost:8808"
+const remoteURL= "http://localhost:8088"
 
 // --------------eat data-------------//
+
+export const getAllEat= () => {
+    return fetch(`${remoteURL}/eat?_expand=user`)
+    .then(result=> result.json())
+}
+
 export const getEatById = (id) => {
     return fetch(`${remoteURL}/eat/${id}`)
     .then(response => response.json())
@@ -30,8 +36,8 @@ export const updateEat= (editedEat) => {
         headers: {
             "Content-Type": "application/json"
         },
-        body:JSON.stringify(editedEat)
-    }).then(response => response.json())
+        body: JSON.stringify(editedEat)
+    }).then(data => data.json())
 }
 
 export const getUserEat= (userId) => {

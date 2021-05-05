@@ -19,7 +19,7 @@ export const ApplicationViews = () => {
                 <EatForm />
             </Route>
             
-            <Route exact path= "/eat//:eatId(\d+)/edit">
+            <Route exact path= "/eat/:eatId(\d+)/edit">
                 <EatEditForm />
             </Route>
 

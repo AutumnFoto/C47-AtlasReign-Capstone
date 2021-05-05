@@ -29,6 +29,7 @@ export const EatEditForm = () => {
         setIsLoading(true);
 
         const editedEat = {
+            id: eatId,
             food: eat.food, 
             drink: eat.drink, 
             snack: eat.snack,
@@ -37,7 +38,7 @@ export const EatEditForm = () => {
             };
 
             updateEat(editedEat)
-            .then(() => history.push("/eat")
+            .then(() => history.push("/")
 
             )
 
@@ -62,11 +63,11 @@ return (
             <label htmlFor="drink">Drink:</label>
             <input type="text" required className="form-control" onChange={handleFieldChange} id="drink" value={eat.drink} />
 
-            <label htmlFor= "snack"> Snack:</label>
+            <label htmlFor= "snack">Snack:</label>
             <input type= "text" required className="form-control" onChange={handleFieldChange} id="snack" value={eat.snack} />
             </div>
 
-            <Link to = {`/profiles`}>
+            <Link to = {`/`}>
             <button className= "btn-primary">Go Back</button>
             </Link>
 

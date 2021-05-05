@@ -14,6 +14,9 @@ return (
 
 <button type="button" className="addeat-btn" onClick={() => 
             {history.push("eat/create")}}> Eat</button>
+
+<button type="button" className="addsleep-btn" onClick={() => 
+            {history.push("sleep/create")}}> Sleep</button>
 </>
 )
 }

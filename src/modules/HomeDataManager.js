@@ -40,15 +40,14 @@ export const updateEat= (editedEat) => {
     }).then(data => data.json())
 }
 
-export const getUserEat= (userId) => {
-    return fetch(`${remoteURL}/eat?userId=${userId}&_expand=user`)
-    .then(response => response.json())
-}
-
 // --------------------------//
 
 // ----- sleep data--------//
 
+export const getAllSleep= () => {
+    return fetch(`${remoteURL}/sleep?_expand=user`)
+    .then(result=> result.json())
+}
 
 export const getSleepbyId = (id) => {
     return fetch(`${remoteURL}/sleep/${id}`)
@@ -82,14 +81,15 @@ export const updateSleep= (editedSleep) => {
         body:JSON.stringify(editedSleep)
     }).then(response => response.json())
 }
-
-export const getUserSleep= (userId) => {
-    return fetch(`${remoteURL}/sleep?userId=${userId}&_expand=user`)
-    .then(response => response.json())
-}
 // -------------------------------//
 
 // ------diaper data-----------//
+
+export const getAllDiaper= () => {
+    return fetch(`${remoteURL}/diaper?_expand=user`)
+    .then(result=> result.json())
+}
+
 
 export const getDiaperbyId = (id) => {
     return fetch(`${remoteURL}/diaper/${id}`)
@@ -122,11 +122,6 @@ export const updateDiaper= (editedDiaper) => {
         },
         body:JSON.stringify(editedDiaper)
     }).then(response => response.json())
-}
-
-export const getUserDiaper= (userId) => {
-    return fetch(`${remoteURL}/diaper?userId=${userId}&_expand=user`)
-    .then(response => response.json())
 }
 // -------------------------------//
 
@@ -168,11 +163,6 @@ export const updateActivity= (editedActivity) => {
         },
         body:JSON.stringify(editedActivity)
     }).then(response => response.json())
-}
-
-export const getUserActivity= (userId) => {
-    return fetch(`${remoteURL}/activity?userId=${userId}&_expand=user`)
-    .then(response => response.json())
 }
 
 // ---------------------------------//

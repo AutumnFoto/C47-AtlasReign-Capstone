@@ -10,6 +10,9 @@ import {ActivityList} from "./home/activity/ActivityList";
 import {ActivityForm} from "./home/activity/ActivityForm";
 import {ActivityEditForm} from "./home/activity/ActivityEditForm";
 import {HomeButtons} from "./home/buttons";
+import {SleepList} from "./home/sleep/SleepList";
+import {SleepForm} from "./home/sleep/SleepForm";
+import {SleepEditForm} from "./home/sleep/SleepEditForm";
 
 export const ApplicationViews = () => {
 
@@ -19,6 +22,16 @@ export const ApplicationViews = () => {
               <HomeButtons />
               <EatList />
             <ActivityList/>
+            <SleepList />
+
+            </Route>
+
+            <Route exact path= "/sleep/create">
+                <SleepForm />
+            </Route>
+
+            <Route exact path= "/sleep/:sleepId(\d+)/edit">
+                <SleepEditForm />
             </Route>
 
             <Route exact path= "/eat/create">

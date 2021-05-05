@@ -1,16 +1,13 @@
 .sleep_card {
-    background-color: #f5d7e8;
+    background-color: #88CED3;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     margin-bottom: 1em;
-    margin-left: 0cm;
+    margin-left: 3cm;
     width: 13cm;
     height: 5cm;
-
-    
+   
 }
-
-
 
 .container-sleepcards{
     background-color: #FFFBF0;
@@ -22,8 +19,10 @@
 }
 
 button{
-    background-color:#FF8A78;
+   background-color:#FF8A78;
    color: white;
+   justify-self: center;
+
 }
 
 .edit-btn{

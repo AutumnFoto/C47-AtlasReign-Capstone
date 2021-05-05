@@ -114,7 +114,7 @@ export const addDiaper =(newDiaper) => {
 }
 
 export const updateDiaper= (editedDiaper) => {
-    return fetch(`${remoteURL}/eat/${editedDiaper.id}`, 
+    return fetch(`${remoteURL}/diaper/${editedDiaper.id}`, 
     {
         method: "PUT",
         headers: {

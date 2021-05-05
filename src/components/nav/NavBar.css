@@ -1,3 +1,4 @@
+
  .navbar {
     list-style-type: none;
     margin: 0;
@@ -7,6 +8,9 @@
     width: 100%;
     float: right;
     text-align: right;
+    font-family:  'Abril Fatface', cursive;
+    font-size: 20px;
+    
 } 
 
 .nav-item {
@@ -22,7 +26,7 @@
   }
 
   .logo{
-    height: 5cm;
-    width: 5cm;
-    padding: 1px 700px
+    height: 7cm;
+    width: 8cm;
+    padding: 1px 770px
   }

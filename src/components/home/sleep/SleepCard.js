@@ -7,7 +7,7 @@ export const SleepCard = ({sleep, handleDeleteSleep}) => {
 
     return(
 
-        <div className="sleep_caard">
+        <div className="sleep_card">
             <div className= "sleep_time"> Time of Day: {sleep.timeofday}</div>
 
             <div className= "sleep_hours">Hours: {sleep.hours}</div>

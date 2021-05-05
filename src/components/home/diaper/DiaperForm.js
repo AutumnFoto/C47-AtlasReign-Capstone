@@ -38,7 +38,7 @@ const handleClickSaveDiaper = (event) => {
 
     const newDiaperObj= {
         time: diaper.time, 
-        hours: diaper.diaper,
+        diaper: diaper.diaper,
         userId: diaper.userId
     }
 
@@ -61,7 +61,7 @@ return (
         <fieldset>
             <div className= "form-group">
                 <label htmlFor="diaper">Diaper: </label>
-                <input type="text" id="time" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder= "wet..dry..mixed.." value={diaper.diaper} />
+                <input type="text" id="diaper" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder= "wet..dry..mixed.." value={diaper.diaper} />
             </div>
         </fieldset>
 

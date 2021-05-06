@@ -1,9 +1,9 @@
 import React from "react";
-// import {useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import "./MilestoneCard.css";
 
-export const MilestoneCard = ({milestone}) => {
-    // const history= useHistory()
+export const MilestoneCard = ({milestone, handleDeleteMilestone}) => {
+    const history= useHistory()
 
     return(
         <div className= "milestone_card">
@@ -11,6 +11,10 @@ export const MilestoneCard = ({milestone}) => {
             <img src={milestone.imageURL} alt="milestonepic" />
             <h3 className="milestone_month"> Month: {milestone.month}</h3>
             <div className="milestone_milestone">Milestone: {milestone.milestone}</div>
-</div>
+
+            <button className="edit-btn" type="button" onClick={() => history.push(`/milestone/${milestone.id}/edit`)}>Edit</button>
+
+<button className="delete-btn" type="button" onClick={() => handleDeleteMilestone(milestone.id)}>Trash</button>
+        </div>
     )
 }

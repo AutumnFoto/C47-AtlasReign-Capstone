@@ -1,0 +1,32 @@
+.milestone_card {
+    background-color: #88CED3;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    margin-left: 3cm;
+    width: 13cm;
+    height: 5cm;
+   
+}
+
+.container-milestonecards{
+    background-color: #FFFBF0;
+    padding: 1px 600px
+}
+
+.milestonesection-content{
+    background-color: #fffefe
+}
+
+button{
+   background-color:#FF8A78;
+   color: white;
+   justify-self: center;
+
+}
+
+.edit-btn{
+    background-color:#BBE7F0 ;
+    color: #0c0c0c;
+   padding: 3px 194px;
+}

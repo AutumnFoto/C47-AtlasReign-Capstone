@@ -16,7 +16,9 @@ import {SleepEditForm} from "./home/sleep/SleepEditForm";
 import {DiaperList} from "./home/diaper/DiaperList";
 import {DiaperForm} from "./home/diaper/DiaperForm";
 import {DiaperEditForm} from "./home/diaper/DiaperEditForm";
-import { DiaperCard } from "./home/diaper/DiaperCard";
+import { MilestoneList} from "./milestone/MilestoneList";
+import {MilestoneForm} from "./milestone/MilestoneForm";
+import {MilestoneEditForm} from "./milestone/MilestoneEditForm";
 
 export const ApplicationViews = () => {
 
@@ -28,7 +30,21 @@ export const ApplicationViews = () => {
                 <ActivityList/>
                  <SleepList />
                  <DiaperList />
+                 
              </Route>
+
+             <Route exact path= "/milestones">
+                <MilestoneList />
+            </Route>
+
+
+             <Route exact path= "/milestone/create">
+                <MilestoneForm />
+            </Route>
+
+            <Route exact path= "/milestone/:milestoneId(\d+)/edit">
+                <MilestoneEditForm />
+            </Route>
 
 
              <Route exact path= "/diaper/create">

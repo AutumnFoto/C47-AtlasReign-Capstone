@@ -1,8 +1,12 @@
+
 .addactivity-btn{
     padding: 30px 40px;
     margin-left: 570px;
     margin-top: 30px;
     background-color: #F1C6C8;
+    font-family: 'Abril Fatface', cursive;
+    color:black;
+    font-size: 18px;
 
 }
 .addeat-btn{
@@ -12,6 +16,9 @@
     margin-top: 30px;
     margin-bottom: 1cm;
     background-color: #E5C6D8;
+    font-family: 'Abril Fatface', cursive;
+    color:black;
+    font-size: 18px;
 
 }
 
@@ -21,6 +28,9 @@
     margin-left: 100px;
     margin-top: 30px;
     background-color: #88CED3;
+    font-family: 'Abril Fatface', cursive;
+    color:black;
+    font-size: 18px;
 
 }
 
@@ -29,6 +39,8 @@
     margin-left: 100px;
     margin-top: 30px;
     background-color: #FFF1C9;
-   
+    font-family: 'Abril Fatface', cursive;
+    color:black;
+    font-size: 18px;
 
 }

@@ -8,7 +8,7 @@ export const DiaperCard= ({diaper, handleDeleteDiaper}) => {
     return (
 
         <div className= "diaper_card">
-            <div className="diaper_time"> Time: {diaper.time}</div>
+            <div className="diaper_time"> Date: {diaper.timestamp}</div>
 
             <div className= "diaper_diaper">Diaper: {diaper.diaper}</div>
 

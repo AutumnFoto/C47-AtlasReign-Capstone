@@ -13,9 +13,6 @@ const [milestone, setMilestone] = useState({
     milestone:"",
     userId: parseInt(currentUser)
 });
-
-const [isLoading, setIsLoading] = useState(false)
-
 const history= useHistory();
 
 const handleControlledInputChange= (event) => {
@@ -44,7 +41,7 @@ const handleClickSaveEat = (event) => {
     }
 
     addMilestone(newMilestoneObject)
-    .then(() => history.push("/milestone"))
+    .then(() => history.push("/milestones"))
 }
 
 return(

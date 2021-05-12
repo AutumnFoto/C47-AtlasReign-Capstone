@@ -12,6 +12,8 @@ export const SleepCard = ({sleep, handleDeleteSleep}) => {
 
             <div className= "sleep_hours">Hours: {sleep.hours}</div>
 
+            <div className= "sleep_date">Date: {sleep?.timestamp}</div>
+
         <button className="edit-btn" type="button" onClick={() => history.push(`/sleep/${sleep?.id}/edit`)}>Edit</button>
 
             <button className="delete-btn" type="button" onClick={() => handleDeleteSleep(sleep?.id)}>Trash</button>

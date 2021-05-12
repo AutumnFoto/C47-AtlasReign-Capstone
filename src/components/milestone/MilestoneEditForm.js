@@ -38,7 +38,7 @@ export const MilestoneEditForm = () => {
             };
 
             updateMilestone(editedMilestone)
-            .then(() => history.push("/")
+            .then(() => history.push("/milestones")
 
             )
 

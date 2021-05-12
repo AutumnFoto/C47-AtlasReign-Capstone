@@ -5,17 +5,18 @@ import "./SleepForm.css";
 
 export const SleepForm = () => {
 
-const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
+const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"));
+
+const timeStamp= Date.now();
 
 const [sleep, setSleep] = useState({
 
   timeofday: "",
   hours:"",
+  timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp),
   userId: parseInt(currentUser)
 
 });
-
-// const [isLoading, setIsLoading] = useState(false)
 
 const history= useHistory();
 
@@ -39,11 +40,12 @@ const handleClickSaveSleep= (event) => {
     const newSleepObj = {
         timeofday: sleep.timeofday,
         hours: sleep.hours,
+        timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp),
         userId: sleep.userId
     }
 
     addSleep(newSleepObj)
-    .then(() => history.push("/sleep"))
+    .then(() => history.push("/"))
 
 }
 
@@ -65,7 +67,7 @@ return (
             </div>
         </fieldset>
 
-        <button type= "button" className="btn btn-primary" onClick={handleClickSaveSleep}>Save Eat</button>
+        <button type= "button" className="btn btn-primary" onClick={handleClickSaveSleep}>Save Sleep</button>
     </form>
 )
 }

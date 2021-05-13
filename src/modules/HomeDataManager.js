@@ -132,8 +132,8 @@ export const getActivitybyId = (id) => {
     .then(response => response.json())
 }
 
-export const getAllActivities= () => {
-    return fetch(`${remoteURL}/activity?_expand=user`)
+export const getAllActivities= (userId) => {
+    return fetch(`${remoteURL}/activity?userId=${userId}&_expand=user`)
     .then(result=> result.json())
 }
 

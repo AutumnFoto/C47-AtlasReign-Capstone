@@ -32,7 +32,7 @@ export const ProfileEditForm = () => {
             id: profileId, 
             name: profile.name,
             dob: profile.dob,
-             image: profile.imageURL,
+             image: profile.image,
              userId: profile.userId
             
             };

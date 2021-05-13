@@ -11,7 +11,7 @@ const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
 const [activity, setActivity] = useState([]);
 
 const getActivity = () => {
-    return getAllActivities()
+    return getAllActivities(currentUser)
     .then(activityFromAPI => {
         setActivity(activityFromAPI)
     });
@@ -21,7 +21,7 @@ const getActivity = () => {
 
 const handleDeleteActivity = id => {
     deleteActivity(id)
-    .then(() => getAllActivities()).then(setActivity)
+    .then(() => getAllActivities(currentUser)).then(setActivity)
 }
 
 const handleUpdateActivity = (activity) => {

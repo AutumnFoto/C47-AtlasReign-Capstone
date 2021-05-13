@@ -1,6 +1,7 @@
 .run{
     margin-left: 1rem;
 }
+
 .addactivity-btn{
     padding: 30px 40px;
     margin-left: 570px;
@@ -9,13 +10,12 @@
     font-family: 'Abril Fatface', cursive;
     color:black;
     font-size: 18px;
-    
-
 }
 
 .eat{
    margin-left: 1rem;
 }
+
 .addeat-btn{
     padding: 30px 50px;
     margin-left: 100px;
@@ -26,12 +26,12 @@
     font-family: 'Abril Fatface', cursive;
     color:black;
     font-size: 18px;
-
 }
 
 .bed{
     margin-left: 1rem;
 }
+
 .addsleep-btn{
     padding: 30px 40px;
     margin-left: 100px;
@@ -40,12 +40,12 @@
     font-family: 'Abril Fatface', cursive;
     color:black;
     font-size: 18px;
-
 }
 
 .baby{
     margin-left: 1rem;
 }
+
 .adddiaper-btn{
     padding: 30px 40px;
     margin-left: 100px;
@@ -54,5 +54,4 @@
     font-family: 'Abril Fatface', cursive;
     color:black;
     font-size: 18px;
-
 }

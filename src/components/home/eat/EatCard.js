@@ -14,6 +14,8 @@ export const EatCard = ({eat, handleDeleteEat}) => {
 
             <div className="eat_snack">Snack:{eat?.snack}</div>
 
+            <div className= "eat_date">Date: {eat?.timestamp}</div>
+
 <button className="edit-btn" type="button" onClick={() => history.push(`/eat/${eat?.id}/edit`)}>Edit</button>
 
 <button className= "delete-btn" type= "button" onClick={() => handleDeleteEat(eat?.id)}>Trash</button>

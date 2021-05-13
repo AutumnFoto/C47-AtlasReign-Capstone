@@ -14,8 +14,6 @@ export const ProfileForm = () => {
         userId: parseInt(currentUser)
     });
 
-    const [isLoading, setIsLoading] = useState(false);
-
     const history= useHistory();
 
     const handleControlledInputChange = (event) => {

@@ -4,11 +4,14 @@ import {updateSleep, getSleepbyId} from "../../../modules/HomeDataManager";
 
 export const SleepEditForm= () => {
 
-    const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
+    const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"));
+
+    const timeStamp= Date.now();
 
     const [sleep, setSleep] = useState({
         timeofday: "",
          hours:"",
+         timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp) ,
          userId: parseInt(currentUser)
     })
 
@@ -32,6 +35,7 @@ export const SleepEditForm= () => {
             id: sleepId, 
             timeofday: sleep.timeofday,
             hours: sleep.hours,
+            timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp) ,
             userId: sleep.userId
         };
 

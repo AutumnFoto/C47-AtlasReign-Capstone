@@ -6,8 +6,10 @@ import "./DiaperForm.css";
 export const DiaperForm = () => {
     const currentUser=JSON.parse(sessionStorage.getItem("atlasreign_id"))
 
+    const timeStamp= Date.now();
+
     const [diaper, setDiaper] = useState({
-        time: "",
+         timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp),
         diaper: "",
         userId: parseInt(currentUser)
     });
@@ -37,26 +39,19 @@ const handleClickSaveDiaper = (event) => {
     event.preventDefault()
 
     const newDiaperObj= {
-        time: diaper.time, 
+        timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp) ,
         diaper: diaper.diaper,
         userId: diaper.userId
     }
 
     addDiaper(newDiaperObj)
-    .then(() => history.push("/diaper"))
+    .then(() => history.push("/"))
 }
 
 return (
 
     <form className="diaperform">
         <h2 className= "diaperform_title"> Diaper</h2>
-
-        <fieldset>
-            <div className= "form-group">
-                <label htmlFor="time">Time: </label>
-                <input type="text" id="time" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder= "time.." value={diaper.time} />
-            </div>
-        </fieldset>
 
         <fieldset>
             <div className= "form-group">

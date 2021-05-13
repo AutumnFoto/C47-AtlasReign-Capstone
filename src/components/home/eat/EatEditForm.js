@@ -3,12 +3,15 @@ import {useParams, useHistory, Link} from "react-router-dom";
 import {updateEat , getEatById} from "../../../modules/HomeDataManager";
 
 export const EatEditForm = () => {
-    const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
+    const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"));
+
+    const timeStamp= Date.now();
 
     const [eat, setEat] = useState({
         food: "",
         drink: "",
         snack: "",
+        timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp) ,
         userId: parseInt(currentUser)
     })
 
@@ -33,6 +36,7 @@ export const EatEditForm = () => {
             food: eat.food, 
             drink: eat.drink, 
             snack: eat.snack,
+            timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp) ,
             userId: eat.userId
             
             };

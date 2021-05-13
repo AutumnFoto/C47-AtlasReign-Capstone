@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {ActivityCard} from "./ActivityCard";
 import {updateActivity, getAllActivities, deleteActivity} from "../../../modules/HomeDataManager";
-import {useHistory} from "react-router-dom";
+// import {useHistory} from "react-router-dom";
 import "./ActivityList.css";
 
 export const ActivityList = () => {
@@ -17,7 +17,7 @@ const getActivity = () => {
     });
 };
 
-const history= useHistory();
+// const history= useHistory();
 
 const handleDeleteActivity = id => {
     deleteActivity(id)
@@ -43,16 +43,13 @@ useEffect(() => {
 
 return(
     <>
-    {/* <section className="activitysection-content">
-        <button type="button" className= "addactivity-btn" onClick={() =>{history.push("activity/create")}}> Activity
-  </button>
-    </section> */}
 
     <div className="container-activitycards">
         {activity.map(activity => 
             <ActivityCard
             key={activity.id}
             activity={activity}
+            userId={currentUser}
             handleUpdateActivity={handleUpdateActivity}
             handleDeleteActivity={handleDeleteActivity}
             />

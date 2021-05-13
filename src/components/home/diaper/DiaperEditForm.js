@@ -4,10 +4,12 @@ import {updateDiaper, getDiaperbyId} from "../../../modules/HomeDataManager";
 
 export const DiaperEditForm= () => {
 
-    const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
+    const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"));
+
+    const timeStamp= Date.now();
 
     const [diaper, setDiaper] = useState({
-        time: "",
+        timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp) ,
          diaper:"",
          userId: parseInt(currentUser)
     })
@@ -30,7 +32,7 @@ export const DiaperEditForm= () => {
 
         const editedDiaper= {
             id: diaperId, 
-            time: diaper.time,
+            timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp) ,
             diaper: diaper.diaper,
             userId: diaper.userId
         };
@@ -52,10 +54,6 @@ export const DiaperEditForm= () => {
     <>
            <form>
 <fieldset>
-    <div className="editform">
-        <label htmlFor="time">Time:</label>
-        <input type= "text" required className="form-control" onChange={handleFieldChange} id="time" value={diaper.time} />
-    </div>
 
     <div className="editform">
         <label htmlFor="diaper">Diaper:</label>

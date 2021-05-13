@@ -4,14 +4,16 @@ import {addActivity} from "../../../modules/HomeDataManager";
 import "./ActivityForm.css";
 
 export const ActivityForm = () => {
-    const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
+    const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"));
+
+const timeStamp= Date.now();
 
 const [activity, setActivity] = useState({
     activity:"",
+    timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp),
     userId: parseInt(currentUser)
 });
 
-const [isLoading, setIsLoading] = useState(false)
 
 const history= useHistory();
 
@@ -36,11 +38,12 @@ const handleClickSaveActivity = (event) => {
 
     const newActivityObj= {
         activity: activity.activity,
+        timestamp:new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit'}).format(timeStamp) ,
         userId: activity.userId
     }
 
     addActivity(newActivityObj)
-    .then(() =>history.push("/activity"))
+    .then(() =>history.push("/"))
 }
 
 return (

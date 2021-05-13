@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {EatCard} from "./EatCard";
 import {updateEat, getAllEat, deleteEat } from "../../../modules/HomeDataManager";
-import {useHistory} from "react-router-dom";
+// import {useHistory} from "react-router-dom";
 import "./EatList.css";
 
 export const EatList = () => {
@@ -15,7 +15,7 @@ export const EatList = () => {
             setEat(eatFromAPI)
         });
     };
-    const history= useHistory();
+    // const history= useHistory();
     
     const handleDeleteEat= id => {
         deleteEat(id)

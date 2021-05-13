@@ -37,7 +37,7 @@ export const ProfileForm = () => {
         const newProfileObject = {
             name: profile.name,
             dob:profile.dob,
-            image: profile.imageUrl,
+            image: profile.image,
             userId: profile.userId
         }
         addProfile(newProfileObject)

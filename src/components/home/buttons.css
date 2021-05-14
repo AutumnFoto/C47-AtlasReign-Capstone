@@ -1,58 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Martel&display=swap');
+
 .run{
     margin-left: 1rem;
 }
+
 .addactivity-btn{
     padding: 30px 40px;
-    margin-left: 570px;
+    margin-left: 500px;
     margin-top: 30px;
-    background-color: #F1C6C8;
-    font-family: 'Abril Fatface', cursive;
+    background-color: #B2DEDD;
     color:black;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
     
-
 }
 
 .eat{
    margin-left: 1rem;
 }
+
 .addeat-btn{
     padding: 30px 50px;
     margin-left: 100px;
     margin-right: 10px;
     margin-top: 30px;
     margin-bottom: 1cm;
-    background-color: #E5C6D8;
-    font-family: 'Abril Fatface', cursive;
+    background-color: #DAE0E6;
     color:black;
-    font-size: 18px;
-
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
 }
 
 .bed{
     margin-left: 1rem;
 }
+
 .addsleep-btn{
     padding: 30px 40px;
     margin-left: 100px;
     margin-top: 30px;
-    background-color: #88CED3;
-    font-family: 'Abril Fatface', cursive;
+    background-color: #FCF6D9;
     color:black;
-    font-size: 18px;
-
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
 }
 
 .baby{
     margin-left: 1rem;
 }
+
 .adddiaper-btn{
     padding: 30px 40px;
     margin-left: 100px;
     margin-top: 30px;
-    background-color: #FFF1C9;
-    font-family: 'Abril Fatface', cursive;
+    background-color: #E0ECE1;
+    font-family: 'Karla', sans-serif;
     color:black;
-    font-size: 18px;
-
+    font-size: 20px;
 }

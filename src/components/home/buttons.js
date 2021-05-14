@@ -11,19 +11,19 @@ const history= useHistory();
 
 return (
     <>
-<button type="button" className= "addactivity-btn" onClick={() =>{history.push("activity/create")}}> Activity
+<button type="button" className= "addactivity-btn" onClick={() =>{history.push("activity/create")}}> ACTIVITY
 <FontAwesomeIcon icon={faRunning} size="2x" className="run"/>
 
 </button>
 
 <button type="button" className="addeat-btn" onClick={() => 
-            {history.push("eat/create")}}> Eat 
+            {history.push("eat/create")}}> EAT
 <FontAwesomeIcon icon={faUtensils} size="2x" className="eat"/>
             
             </button>
 
 <button type="button" className="addsleep-btn" onClick={() => 
-            {history.push("sleep/create")}}> Sleep
+            {history.push("sleep/create")}}> SLEEP
 
 <FontAwesomeIcon icon={faBed} size="2x" className="bed"/>
             
@@ -31,7 +31,7 @@ return (
 
 
 <button type="button" className="adddiaper-btn" onClick={() => 
-            {history.push("diaper/create")}}> Diaper
+            {history.push("diaper/create")}}> DIAPER
             <FontAwesomeIcon icon={faBaby} size="2x" className="baby"/>
             
             </button>

@@ -1,0 +1,31 @@
+body{
+    background-color: #F0EDE6
+    ;
+}
+.feild{
+    width: 15rem;
+    margin-left: 56rem;
+    margin-bottom: 1rem;
+    
+
+}
+
+.sign{
+    width: 5rem;
+    margin-left: 61rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.link--register{
+    text-align: center;
+}
+
+.login{
+    text-align: center;
+}
+
+.logo{
+   margin-left: 6rem;
+
+}

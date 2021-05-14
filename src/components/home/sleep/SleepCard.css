@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
+
+
 .sleep_card {
-    background-color: #88CED3;
+    background-color: #FCF6D9;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     margin-bottom: 1em;
     margin-left: 3cm;
     width: 13cm;
     height: 5cm;
+    font-family: 'Martel', serif;
+    font-size: 18px;
    
 }
 
@@ -17,16 +22,15 @@
 .sleepsection-content{
     background-color: #fffefe
 }
-
-button{
-   background-color:#FF8A78;
+.delete-btn{
+   background-color:#F2A68D;
    color: white;
    justify-self: center;
 
 }
 
 .edit-btn{
-    background-color:#BBE7F0 ;
+    background-color:#1FA5A6;
     color: #0c0c0c;
    padding: 3px 194px;
 }

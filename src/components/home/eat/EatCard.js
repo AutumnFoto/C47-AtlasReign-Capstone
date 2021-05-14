@@ -8,13 +8,13 @@ export const EatCard = ({eat, handleDeleteEat}) => {
 
     return (
         <div className="eat_card">
-            <div className="eat_food">Food:{eat?.food}</div>
+            <div className="eat_food"><b>Food: </b>{eat?.food}</div>
 
-            <div className="eat_drink">Drink:{eat?.drink}</div>
+            <div className="eat_drink"><b>Drink: </b>{eat?.drink}</div>
 
-            <div className="eat_snack">Snack:{eat?.snack}</div>
+            <div className="eat_snack"><b>Snack: </b>{eat?.snack}</div>
 
-            <div className= "eat_date">Date: {eat?.timestamp}</div>
+            <div className= "eat_date"><b>Date:</b> {eat?.timestamp}</div>
 
 <button className="edit-btn" type="button" onClick={() => history.push(`/eat/${eat?.id}/edit`)}>Edit</button>
 

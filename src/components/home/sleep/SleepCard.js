@@ -8,11 +8,11 @@ export const SleepCard = ({sleep, handleDeleteSleep}) => {
     return(
 
         <div className="sleep_card">
-            <div className= "sleep_time"> Time of Day: {sleep.timeofday}</div>
+            <div className= "sleep_time"> <b>Time of Day: </b>{sleep.timeofday}</div>
 
-            <div className= "sleep_hours">Hours: {sleep.hours}</div>
+            <div className= "sleep_hours"><b>Hours: </b>{sleep.hours}</div>
 
-            <div className= "sleep_date">Date: {sleep?.timestamp}</div>
+            <div className= "sleep_date"><b>Date: </b>{sleep?.timestamp}</div>
 
         <button className="edit-btn" type="button" onClick={() => history.push(`/sleep/${sleep?.id}/edit`)}>Edit</button>
 

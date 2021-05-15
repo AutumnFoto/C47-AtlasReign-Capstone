@@ -67,7 +67,7 @@ return (
             </div>
         </fieldset>
 
-        <button type= "button" className="btn btn-primary" onClick={handleClickSaveSleep}>Save Sleep</button>
+        <button type= "button" className="save-btn" onClick={handleClickSaveSleep}>Save Sleep</button>
     </form>
 )
 }

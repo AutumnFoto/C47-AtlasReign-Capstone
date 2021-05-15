@@ -60,11 +60,11 @@ export const ActivityEditForm = () => {
                     </div>
 
                     <Link to= {`/`}>
-                        <button className="btn-primary">Go Back</button>
+                        <button className="return">Go Back</button>
                         </Link>
 
                         <div className= "submit">
-                            <button type="button" disabled={isLoading} onClick={updateExistingActivity} className="btn-primary">Submit
+                            <button type="button" disabled={isLoading} onClick={updateExistingActivity} className="submit">Submit
                             </button>
                         </div>
                     

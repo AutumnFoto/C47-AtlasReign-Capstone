@@ -72,11 +72,11 @@ return (
             </div>
 
             <Link to = {`/`}>
-            <button className= "btn-primary">Go Back</button>
+            <button className= "return"> Go Back </button>
             </Link>
 
             <div className="submit">
-                <button type="button" disabled={isLoading} onClick={updateExisitingEat} className="btn-primary">Submit</button>
+                <button type="button" disabled={isLoading} onClick={updateExisitingEat} className="submit"> Submit </button>
             </div>
         </fieldset>
     </form>

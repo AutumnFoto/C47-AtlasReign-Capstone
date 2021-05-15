@@ -6,7 +6,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     margin-bottom: 1em;
-    margin-left: 3cm;
+    margin-left: 8em;
     width: 13cm;
     height: 5cm;
     font-family: 'Martel', serif;
@@ -18,7 +18,8 @@
 
 .container-eatcards{
     background-color: #FFFBF0;
-    padding: 1px 600px
+    /* display:flex; */
+    padding: 1px 600px;
 }
 
 .eatsection-content{

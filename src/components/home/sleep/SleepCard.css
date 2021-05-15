@@ -6,31 +6,34 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     margin-bottom: 1em;
-    margin-left: 3cm;
+    margin-left: 8em;
     width: 13cm;
     height: 5cm;
     font-family: 'Martel', serif;
     font-size: 18px;
-   
 }
 
 .container-sleepcards{
     background-color: #FFFBF0;
-    padding: 1px 600px
+    padding: 1px 600px;
+    /* display:flex; */
 }
 
 .sleepsection-content{
     background-color: #fffefe
 }
-.delete-btn{
+button.delete-btn{
    background-color:#F2A68D;
-   color: white;
+   color: #0c0c0c;
    justify-self: center;
+   padding: 3px 50px;
 
 }
 
-.edit-btn{
+button.edit-btn{
     background-color:#1FA5A6;
     color: #0c0c0c;
-   padding: 3px 194px;
+   padding: 3px 50px;
+   margin-left: 10px;
+   margin-top: 13px;
 }

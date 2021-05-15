@@ -66,11 +66,11 @@ export const SleepEditForm= () => {
         <input type= "text" required className="form-control" onChange={handleFieldChange} id="hours" value={sleep.hours} /></div>
 
         <Link to = {`/`}>
-            <button className= "btn-primary">Go Back</button>
+            <button className= "retun">Go Back</button>
             </Link>
 
             <div className="submit">
-                <button type="button" disabled={isLoading} onClick={updateExisitingSleep} className="btn-primary">Submit</button>
+                <button type="button" disabled={isLoading} onClick={updateExisitingSleep} className="submit">Submit</button>
             </div>
         </fieldset>
     </form>

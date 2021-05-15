@@ -77,7 +77,7 @@ export const ProfileForm = () => {
                     value= {profile.imageUrl} />
                 </div>
             </fieldset>
-            <button type= "button" className="btn btn-primary" onClick={handleClickSaveProfile}>Save Profile</button>
+            <button type= "button" className="save-btn" onClick={handleClickSaveProfile}>Save Profile</button>
         </form>
     )
 

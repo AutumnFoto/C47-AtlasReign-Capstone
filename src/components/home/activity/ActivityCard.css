@@ -5,7 +5,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     margin-bottom: 1em;
-    margin-left: 3cm;
+    margin-left: 8em;
     width: 13cm;
     height: 5cm;
     font-family: 'Martel', serif;
@@ -15,6 +15,7 @@
 
 .container-activitycards{
     background-color: #FFFBF0;
+    /* display:flex; */
     padding: 1px 600px;
    
     
@@ -25,7 +26,7 @@
 }
 
 .delete-btn{
-   background-color:#F2A68D;
+   background-color:#0c0b0b;
    color: white;
    justify-self: center;
 

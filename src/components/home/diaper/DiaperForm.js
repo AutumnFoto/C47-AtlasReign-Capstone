@@ -60,7 +60,7 @@ return (
             </div>
         </fieldset>
 
-        <button type= "button" className="btn btn-primary" onClick={handleClickSaveDiaper}>Save Diaper</button>
+        <button type= "button" className="save-btn" onClick={handleClickSaveDiaper}>Save Diaper</button>
  </form>
 )
 }

@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import {useHistory} from "react-router";
 import {addActivity} from "../../../modules/HomeDataManager";
 import "./ActivityForm.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faSave} from "@fortawesome/free-solid-svg-icons";
 
 export const ActivityForm = () => {
     const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"));
@@ -48,16 +50,16 @@ const handleClickSaveActivity = (event) => {
 
 return (
     <form className= "activityform">
-        <h2 className="activityform_title">Activity</h2>
+        <h2 className="activityform_title">Activity Form</h2>
 
         <fieldset>
         <div className="form-group">
-        <label htmlFor="activity">Activity:</label>
+        <label htmlFor="activity">Activity: </label>
         <input type="text" id="activity" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="activity..." value={activity.activity}/>
         </div>
         </fieldset>
 
-        <button type="button" className="btn btn-primary" onClick={handleClickSaveActivity}> Save Activity</button>
+        <button type="" className="save-btn" onClick={handleClickSaveActivity}> Save   <FontAwesomeIcon icon={faSave} size="1x" className="save"/></button>
     </form>
 )
 

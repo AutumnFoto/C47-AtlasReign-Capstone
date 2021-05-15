@@ -60,11 +60,11 @@ export const DiaperEditForm= () => {
         <input type= "text" required className="form-control" onChange={handleFieldChange} id="diaper" value={diaper.diaper} /></div>
 
         <Link to = {`/`}>
-            <button className= "btn-primary">Go Back</button>
+            <button className= "return">Go Back</button>
             </Link>
 
             <div className="submit">
-                <button type="button" disabled={isLoading} onClick={updateExisitingDiaper} className="btn-primary">Submit</button>
+                <button type="button" disabled={isLoading} onClick={updateExisitingDiaper} className="submit">Submit</button>
             </div>
         </fieldset>
     </form>

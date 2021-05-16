@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";
 import {useParams, useHistory, Link} from "react-router-dom";
 import {updateSleep, getSleepbyId} from "../../../modules/HomeDataManager";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faUndo} from "@fortawesome/free-solid-svg-icons";
+import "./SleepEditForm.css";
 
 export const SleepEditForm= () => {
 
@@ -55,7 +58,7 @@ export const SleepEditForm= () => {
     return (
     <>
            <form>
-<fieldset>
+<fieldset className="sleep_form">
     <div className="editform">
         <label htmlFor="timeofday">Time of Day:</label>
         <input type= "text" required className="form-control" onChange={handleFieldChange} id="timeofday" value={sleep.timeofday} />
@@ -66,11 +69,12 @@ export const SleepEditForm= () => {
         <input type= "text" required className="form-control" onChange={handleFieldChange} id="hours" value={sleep.hours} /></div>
 
         <Link to = {`/`}>
-            <button className= "btn-primary">Go Back</button>
+            <button className= "retun">Go Back
+            <FontAwesomeIcon icon={faUndo} size="1x" className="undo"/> </button>
             </Link>
 
             <div className="submit">
-                <button type="button" disabled={isLoading} onClick={updateExisitingSleep} className="btn-primary">Submit</button>
+                <button type="button" disabled={isLoading} onClick={updateExisitingSleep} className="submit">Submit</button>
             </div>
         </fieldset>
     </form>

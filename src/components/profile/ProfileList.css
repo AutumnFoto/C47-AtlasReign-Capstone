@@ -1,4 +1,7 @@
-.addprofile-btn{
-    margin-left: 400px;
-    padding: 10px 10px;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.profiles{
+    margin-left: 14em;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
 }

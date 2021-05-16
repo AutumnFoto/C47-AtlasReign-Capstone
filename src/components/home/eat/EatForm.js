@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router';
 import {addEat} from "../../../modules/HomeDataManager";
 import "./EatForm.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faSave} from "@fortawesome/free-solid-svg-icons";
+
 
 export const EatForm = () => {
 
@@ -51,23 +54,23 @@ const handleClickSaveEat = (event) => {
 
 return(
     <form className="eatform">
-        <h2 className= "eatform_title"> Eat</h2>
+        <h2 className= "eatform_title"> Eat Form</h2>
 
-        <fieldset>
+        <fieldset className= "eat_form">
             <div className="form-group">
                 <label htmlFor="food"> Food: </label>
                 <input type= "text" id="food" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="food.." value={eat.food}/>
                 </div>
-        </fieldset>
+       
 
-<fieldset>
+
 <div className="form-group">
                 <label htmlFor="drink"> Drink: </label>
                 <input type= "text" id="drink" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="drink.." value={eat.drink}/>
                 </div>
-</fieldset>
 
-<fieldset>
+
+
 <div className="form-group">
                 <label htmlFor="snack"> Snack: </label>
                 <input type= "text" id="snack" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="snack.." value={eat.snack}/>
@@ -75,7 +78,7 @@ return(
 </fieldset>
 
 
-<button type= "button" className="btn btn-primary" onClick={handleClickSaveEat}>Save Eat</button>
+<button type= "button" className="save-btn" onClick={handleClickSaveEat}>SAVE <FontAwesomeIcon icon={faSave} size="1x" className="save"/></button>
     </form>
 
 

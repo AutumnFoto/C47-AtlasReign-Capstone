@@ -70,7 +70,7 @@ return(
 </fieldset>
 
 
-<button type= "button" className="btn btn-primary" onClick={handleClickSaveEat}>Save Milestone</button>
+<button type= "button" className="save-btn" onClick={handleClickSaveEat}>Save Milestone</button>
     </form>
 
 

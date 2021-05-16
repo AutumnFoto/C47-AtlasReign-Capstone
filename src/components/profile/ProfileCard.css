@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
+
 .profile_card {
     background-color: #ffff;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
-    margin-bottom: 1em;
-    flex: 0 1 24%;
+    margin-bottom: 2em;
+    margin-top: 2rem;
+    margin-left: 10rem;
     overflow: hidden;
-    width: 11cm;
-    height: 12cm;
+    width: 12cm;
+    height: 15cm;
+    font-family: 'Martel', serif;
+    font-size: 18px;
     
 }
 
@@ -15,7 +20,8 @@
       width: 70%;
       height: 70%;
       border-radius: 40cm;
-      margin-left: 1cm;
+      margin-top: 1rem;
+      margin-left: 4.5rem;
   }
 
 .profile_name, .profile_dob{
@@ -32,16 +38,18 @@ padding-bottom:15px;
 }
 
 .profilesection-content{
-    background-color: #fffefe
+    background-color: #FFFBF0
 }
 
-button{
+.delete-btn{
     background-color:#FF8A78;
    color: white;
 }
 
-.edit-btn{
-    background-color:#BBE7F0 ;
-    color: #0c0c0c;
-   padding: 3px 194px;
+.addprofile-btn{
+    background-color: #FCF6D9;
+    font-family: 'Martel', serif;
+    font-size: 25px;
+    margin-left: 55.5rem;
+    margin-top: 5rem;
 }

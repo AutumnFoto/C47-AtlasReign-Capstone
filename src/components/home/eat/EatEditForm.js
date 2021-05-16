@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";
 import {useParams, useHistory, Link} from "react-router-dom";
 import {updateEat , getEatById} from "../../../modules/HomeDataManager";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faUndo} from "@fortawesome/free-solid-svg-icons";
+import "./EatEditForm.css";
 
 export const EatEditForm = () => {
     const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"));
@@ -59,24 +62,34 @@ useEffect(() => {
 return (
     <>
     <form>
-        <fieldset>
+        <fieldset className="eat_form">
             <div className="editform">
+                <div>
             <label htmlFor="name">Food:</label>
             <input type="text" required className="form-control" onChange={handleFieldChange} id="food" value={eat.food} />
+            </div>
 
+         <div>
             <label htmlFor="drink">Drink:</label>
             <input type="text" required className="form-control" onChange={handleFieldChange} id="drink" value={eat.drink} />
+            </div>
 
+          <div>
             <label htmlFor= "snack">Snack:</label>
             <input type= "text" required className="form-control" onChange={handleFieldChange} id="snack" value={eat.snack} />
             </div>
 
+        
             <Link to = {`/`}>
-            <button className= "btn-primary">Go Back</button>
+            <button className= "return"> GO BACK 
+            <FontAwesomeIcon icon={faUndo} size="1x" className="undo"/>
+            </button>
             </Link>
+            
 
             <div className="submit">
-                <button type="button" disabled={isLoading} onClick={updateExisitingEat} className="btn-primary">Submit</button>
+                <button type="button" disabled={isLoading} onClick={updateExisitingEat} className="submit"> SUBMIT </button>
+            </div>
             </div>
         </fieldset>
     </form>

@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router';
 import {addProfile} from "../../modules/ProfileDataManager";
 import "./ProfileForm.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faSave} from "@fortawesome/free-solid-svg-icons";
 
 export const ProfileForm = () => {
 
@@ -47,16 +49,16 @@ export const ProfileForm = () => {
 
     return(
         <form className ="profileForm">
-            <h2 className ="profileForm__title">New Profile</h2>
-            <fieldset>
+            <h2 className ="profileform_title">New Profile Form</h2>
+            <fieldset className="profile_form">
                 <div className="form-group">
                     <label  htmlFor="name"> Child's Name:</label>
                     <input type="text" id='name' onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder= "Child's name" 
                     value= {profile.name} />
                 </div>
-            </fieldset>
+          
 
-            <fieldset>
+            
                 <div className= "form-group">
                     <label htmlFor= "dob">DOB:</label>
                     <input type = "text" id="dob" onChange={handleControlledInputChange} required autoFocus
@@ -64,9 +66,9 @@ export const ProfileForm = () => {
                     placeholder="childs dob"
                     value={profile.dob} />
                 </div>
-            </fieldset>
+            
 
-            <fieldset>
+          
                 <div className="form-group">
                     <label htmlFor= "image">Image:</label>
                     <input text="text" id="image"
@@ -77,7 +79,7 @@ export const ProfileForm = () => {
                     value= {profile.imageUrl} />
                 </div>
             </fieldset>
-            <button type= "button" className="btn btn-primary" onClick={handleClickSaveProfile}>Save Profile</button>
+            <button type= "button" className="save-btn" onClick={handleClickSaveProfile}>SAVE  <FontAwesomeIcon icon={faSave} size="1x" className="save"/></button>
         </form>
     )
 

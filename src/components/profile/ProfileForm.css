@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Martel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.profileform_title{
+ text-align: center;
+ font-family: 'Dancing Script', cursive;
+ font-size: 3em;
+}
+
+.save-btn{
+    background-color: #DAE0E6;
+    height:3em;
+    margin-left: 70em;
+    margin-top: 2em;
+    font-family: 'Karla', sans-serif;
+    
+}
+
+.profile_form{
+    width: 18em;
+    height: 7em;
+    margin-left: 55em;
+    margin-top: 3em;
+    background-color:#F2A68D
+}

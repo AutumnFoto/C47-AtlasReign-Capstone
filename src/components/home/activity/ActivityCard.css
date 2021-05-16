@@ -1,34 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
+
 .activity_card {
-    background-color: #fddcdd;
+    background-color: #B2DEDD;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     margin-bottom: 1em;
-    margin-left: 3cm;
+    margin-left: 8em;
     width: 13cm;
     height: 5cm;
+    font-family: 'Martel', serif;
+    font-size: 18px;
    
 }
 
 .container-activitycards{
     background-color: #FFFBF0;
+    /* display:flex; */
     padding: 1px 600px;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 20px;
+   
+    
 }
 
 .activitysection-content{
     background-color: #fffefe
 }
 
-button{
-   background-color:#FF8A78;
+.delete-btn{
+   background-color:#0c0b0b;
    color: white;
    justify-self: center;
 
 }
 
 .edit-btn{
-    background-color:#BBE7F0 ;
+    background-color:#5b8181 ;
     color: #0c0c0c;
-   padding: 3px 194px;
+   /* padding: 3px 10px; */
+
+
 }

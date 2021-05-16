@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Martel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 .activityform_title{
  text-align: center;
+ font-family: 'Dancing Script', cursive;
+ font-size: 3em;
 }
 
 .save-btn{
@@ -7,11 +12,14 @@
     height:3em;
     margin-left: 70em;
     margin-top: 2em;
+    font-family: 'Karla', sans-serif;
+    
 }
 
 .activity_form{
     width: 15em;
     height: 4em;
     margin-left: 55em;
-    background-color:#B2DEDD
+    background-color:#F2A68D
 }
+

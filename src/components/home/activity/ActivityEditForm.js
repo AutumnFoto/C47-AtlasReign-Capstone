@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";
 import {useParams, useHistory, Link} from "react-router-dom";
 import {updateActivity, getActivitybyId} from "../../../modules/HomeDataManager";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faUndo} from "@fortawesome/free-solid-svg-icons";
+import "./ActivityEditForm.css"
 
 export const ActivityEditForm = () => {
     const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"));
@@ -53,23 +56,26 @@ export const ActivityEditForm = () => {
     return(
         <>
         <form>
-            <fieldset>
+            <fieldset className="activity_form">
                 <div className= "activityeditform">
                     <label htmlFor="activity">Activity: </label>
                     <input type="text" required className="form-control" onChange={handleFieldChange} id="activity" value= {activity.activity} />
                     </div>
 
-                    <Link to= {`/`}>
-                        <button className="return">Go Back</button>
+                    
+            <Link to= {`/`}>
+                        <button className="returnbtn">GO BACK
+                        
+                        <FontAwesomeIcon icon={faUndo} size="1x" className="undo"/>
+                        
+                        </button>
                         </Link>
 
                         <div className= "submit">
-                            <button type="button" disabled={isLoading} onClick={updateExistingActivity} className="submit">Submit
+                            <button type="button" disabled={isLoading} onClick={updateExistingActivity} className="submitbtn">SUBMIT
                             </button>
-                        </div>
-                    
-                
-            </fieldset>
+                            </div>
+                </fieldset>
         </form>
         </>
     );

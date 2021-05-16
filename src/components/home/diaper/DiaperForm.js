@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
 import {addDiaper} from "../../../modules/HomeDataManager";
 import "./DiaperForm.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faSave} from "@fortawesome/free-solid-svg-icons";
 
 export const DiaperForm = () => {
     const currentUser=JSON.parse(sessionStorage.getItem("atlasreign_id"))
@@ -51,16 +53,16 @@ const handleClickSaveDiaper = (event) => {
 return (
 
     <form className="diaperform">
-        <h2 className= "diaperform_title"> Diaper</h2>
+        <h2 className= "diaperform_title"> Diaper Form</h2>
 
-        <fieldset>
+        <fieldset className="diaper_form">
             <div className= "form-group">
                 <label htmlFor="diaper">Diaper: </label>
                 <input type="text" id="diaper" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder= "wet..dry..mixed.." value={diaper.diaper} />
             </div>
         </fieldset>
 
-        <button type= "button" className="save-btn" onClick={handleClickSaveDiaper}>Save Diaper</button>
+        <button type= "button" className="save-btn" onClick={handleClickSaveDiaper}>SAVE  <FontAwesomeIcon icon={faSave} size="1x" className="save"/></button>
  </form>
 )
 }

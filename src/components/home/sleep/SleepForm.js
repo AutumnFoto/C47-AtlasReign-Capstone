@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import {useHistory} from "react-router";
 import {addSleep} from "../../../modules/HomeDataManager";
 import "./SleepForm.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faSave} from "@fortawesome/free-solid-svg-icons";
 
 export const SleepForm = () => {
 
@@ -53,21 +55,20 @@ return (
     <form className= "sleepform">
         <h2 className="sleepform_title"> Sleep</h2>
 
-        <fieldset>
+        <fieldset className="sleep_form">
             <div className="form-group">
                 <label htmlFor="timeofday">Time of Day:</label>
                 <input type= "text" id="timeofday" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="time of the day.." value={sleep.timeofday} />
             </div>
-        </fieldset>
-
-        <fieldset>
+        
+       
             <div className="form-group">
                 <label htmlFor="hours">Hours:</label>
                 <input type= "text" id="hours" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="how many hours.." value={sleep.hours} />
             </div>
         </fieldset>
 
-        <button type= "button" className="save-btn" onClick={handleClickSaveSleep}>Save Sleep</button>
+        <button type= "button" className="save-btn" onClick={handleClickSaveSleep}>SAVE <FontAwesomeIcon icon={faSave} size="1x" className="save"/></button>
     </form>
 )
 }

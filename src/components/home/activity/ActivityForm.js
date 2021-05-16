@@ -59,7 +59,7 @@ return (
         </div>
         </fieldset>
 
-        <button type="" className="save-btn" onClick={handleClickSaveActivity}> Save   <FontAwesomeIcon icon={faSave} size="1x" className="save"/></button>
+        <button type="" className="save-btn" onClick={handleClickSaveActivity}> SAVE   <FontAwesomeIcon icon={faSave} size="1x" className="save"/></button>
     </form>
 )
 

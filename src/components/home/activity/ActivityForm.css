@@ -4,5 +4,14 @@
 
 .save-btn{
     background-color: #DAE0E6;
-    height:3em
+    height:3em;
+    margin-left: 70em;
+    margin-top: 2em;
+}
+
+.activity_form{
+    width: 15em;
+    height: 4em;
+    margin-left: 55em;
+    background-color:#B2DEDD
 }

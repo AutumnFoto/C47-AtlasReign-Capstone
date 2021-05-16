@@ -52,7 +52,7 @@ return (
     <form className= "activityform">
         <h2 className="activityform_title">Activity Form</h2>
 
-        <fieldset>
+        <fieldset className= "activity_form">
         <div className="form-group">
         <label htmlFor="activity">Activity: </label>
         <input type="text" id="activity" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="activity..." value={activity.activity}/>

@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";
 import {updateProfile, getProfileById} from "../../modules/ProfileDataManager";
 import {useParams, useHistory, Link} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faUndo} from "@fortawesome/free-solid-svg-icons";
+import "./ProfileEditForm.css"
 
 export const ProfileEditForm = () => {
     const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
@@ -55,20 +58,27 @@ useEffect(() => {
 return (
     <>
     <form>
-        <fieldset>
+        <fieldset className="profile_form">
+            <div>
             <div className="editform">
             <label htmlFor="name">Name:</label>
             <input type="text" required className="form-control" onChange={handleFieldChange} id="name" value={profile.name} />
+            </div>
 
+<div>
             <label htmlFor="dob">DOB:</label>
             <input type="text" required className="form-control" onChange={handleFieldChange} id="dob" value={profile.dob} />
-
+</div>
+<div>
             <label htmlFor= "image"> Image:</label>
             <input type= "text" required className="form-control" onChange={handleFieldChange} id="image" value={profile.imageUrl} />
             </div>
+            </div>
 
             <Link to = {`/profiles`}>
-            <button className= "btn-primary">Return</button>
+            <button className= "btn-primary">GO BACK
+            <FontAwesomeIcon icon={faUndo} size="1x" className="undo"/>
+            </button>
             </Link>
 
             <div className="submit">

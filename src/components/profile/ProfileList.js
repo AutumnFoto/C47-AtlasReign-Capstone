@@ -41,6 +41,7 @@ export const ProfileList = () => {
 return(
     <>
     <section className= "profilesection-content">
+        <h2 className="profiles">Profiles</h2>
         <button type= "button" className="addprofile-btn"
         // eslint-disable-next-line no-restricted-globals
         onClick={() => { history.push("/profiles/create")}}> Add Profile</button>

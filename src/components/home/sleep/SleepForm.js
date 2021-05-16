@@ -53,7 +53,7 @@ const handleClickSaveSleep= (event) => {
 
 return (
     <form className= "sleepform">
-        <h2 className="sleepform_title"> Sleep</h2>
+        <h2 className="sleepform_title"> Sleep Form</h2>
 
         <fieldset className="sleep_form">
             <div className="form-group">

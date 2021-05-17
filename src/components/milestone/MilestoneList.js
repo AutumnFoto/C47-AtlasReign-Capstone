@@ -46,18 +46,17 @@ export const MilestoneList = () => {
 
 return(
     <>
-
 <section className= "milestonesection-content">
-        <button type= "button" className="addmilestone-btn"
+    <h2 className= "mile"> Milestones </h2>
+         {/* <button type= "button" className="addmilestone-btn"
         // eslint-disable-next-line no-restricted-globals
-        onClick={() => { history.push("/milestone/create")}}> Add Milestone</button>
+        onClick={() => { history.push("/milestones/create")}}> Add Milestone</button>  */}
     </section>
-
     <div className="container-milestonecards">
         {milestone.map(milestone =>
         <MilestoneCard
         key={milestone.id}
-        milestone={milestone}
+        milestones={milestone}
         handleUpdateMilestone={handleUpdateMilestone}
         handleDeleteMilestone= {handleDeleteMilestone}
         />

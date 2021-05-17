@@ -10,7 +10,7 @@ export const EatList = () => {
     const [eat, setEat] = useState([]);
 
     const getEat= () => {
-        return getAllEat()
+        return getAllEat(currentUser)
         .then(eatFromAPI => {
             setEat(eatFromAPI)
         });
@@ -19,7 +19,7 @@ export const EatList = () => {
     
     const handleDeleteEat= id => {
         deleteEat(id)
-        .then(() => getAllEat()).then(setEat)
+        .then(() => getAllEat(currentUser)).then(setEat)
     }
     const handleUpdateEat= (eat) => {
 
@@ -51,6 +51,7 @@ return(
         <EatCard
         key={eat.id}
         eat={eat}
+        userId={currentUser}
         handleUpdateEat={handleUpdateEat}
         handleDeleteEat= {handleDeleteEat}
         />

@@ -1,12 +1,12 @@
 const remoteURL= 'http://localhost:8088';
 
 export const getAllMilestone= () => {
-    return fetch(`${remoteURL}/milestone?_expand=user`)
+    return fetch(`${remoteURL}/milestones?_expand=user`)
     .then(result => result.json())
 }
 
 export const addMilestone= (newMilestone) => {
-    return fetch(`${remoteURL}/milestone`,{
+    return fetch(`${remoteURL}/milestones`,{
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -17,11 +17,11 @@ export const addMilestone= (newMilestone) => {
 }
 
 export const getUserMilestone= (userId) => {
-    return fetch(`${remoteURL}/milestone?userId=${userId}&_expand=user`)
+    return fetch(`${remoteURL}/milestones?userId=${userId}&_expand=user`)
     .then(response => response.json())
 }
 export const updateMilestone = (editedMilestone) => {
-    return fetch(`${remoteURL}/milestone/${editedMilestone.id}`, {
+    return fetch(`${remoteURL}/milestones/${editedMilestone.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -31,12 +31,12 @@ export const updateMilestone = (editedMilestone) => {
 }
 
 export const getMilestoneById= (milestoneId) => {
-    return fetch(`${remoteURL}/milestone/${milestoneId}`)
+    return fetch(`${remoteURL}/milestones/${milestoneId}`)
     .then(response => response.json())
 }
 
 export const deleteMilestone= (id) =>{
-    return fetch(`${remoteURL}/milestone/${id}`, {
+    return fetch(`${remoteURL}/milestones/${id}`, {
         method: "DELETE"
     }).then(result =>result.json)
     

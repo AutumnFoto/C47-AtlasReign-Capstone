@@ -10,7 +10,7 @@ export const SleepList = () => {
     const [sleep, setSleep] = useState([]);
 
     const getSleep = () => {
-        return getAllSleep()
+        return getAllSleep(currentUser)
         .then(sleepFromAPI => {
             setSleep(sleepFromAPI)
         });
@@ -20,7 +20,7 @@ export const SleepList = () => {
 
     const handleDeleteSleep = id => {
         deleteSleep(id)
-        .then(() => getAllSleep()).then(setSleep)
+        .then(() => getAllSleep(currentUser)).then(setSleep)
     }
 
     const handleUpdateSleep = (sleep) => {
@@ -49,6 +49,7 @@ export const SleepList = () => {
                
                key={sleep.id}
                sleep={sleep}
+               userId={currentUser}
                handleUpdateSleep={handleUpdateSleep}
                handleDeleteSleep={handleDeleteSleep}
                 />

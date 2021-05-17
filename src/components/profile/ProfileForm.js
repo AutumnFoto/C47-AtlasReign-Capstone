@@ -21,9 +21,9 @@ export const ProfileForm = () => {
     const handleControlledInputChange = (event) => {
         const newProfile = {...profile}
         let selectedVal = event.target.value
-        if(event.target.id.includes("Id")) {
-            selectedVal= parseInt(selectedVal)
-        }
+        // if(event.target.id.includes("Id")) {
+        //     selectedVal= parseInt(selectedVal)
+        // }
 
         newProfile[event.target.id] = selectedVal
         setProfile(newProfile)

@@ -8,7 +8,7 @@ export const MilestoneForm = () => {
 const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
 
 const [milestone, setMilestone] = useState({
-    imageURL:"",
+    image:"",
     month:"",
     milestone:"",
     userId: parseInt(currentUser)
@@ -34,7 +34,7 @@ const handleClickSaveEat = (event) => {
     event.preventDefault()
 
     const newMilestoneObject= {
-        imageURL: milestone.imageURL, 
+        image: milestone.image, 
         month: milestone.month, 
         milestone: milestone.milestone,
         userId: milestone.userId
@@ -50,8 +50,8 @@ return(
 
         <fieldset>
             <div className="form-group">
-                <label htmlFor="imageURL"> Image: </label>
-                <input type= "text" id="imageURL" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="image.." value={milestone.imageURL}/>
+                <label htmlFor="image"> Image: </label>
+                <input type= "text" id="image" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="image.." value={milestone.image}/>
                 </div>
         </fieldset>
 
@@ -74,6 +74,7 @@ return(
     </form>
 
 
-)
 
+
+);
 }

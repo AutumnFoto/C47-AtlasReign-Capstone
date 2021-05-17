@@ -6,7 +6,7 @@ export const MilestoneEditForm = () => {
     const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
 
     const [milestone, setMilestone] = useState({
-        imageURL:"",
+        image:"",
         month:"",
         milestone:"",
         userId: parseInt(currentUser)
@@ -30,7 +30,7 @@ export const MilestoneEditForm = () => {
 
         const editedMilestone = {
             id: milestoneId,
-            imageURL: milestone.imageURL, 
+            image: milestone.image, 
             month: milestone.month, 
             milestone: milestone.milestone,
             userId: milestone.userId
@@ -58,7 +58,7 @@ return (
         <fieldset>
             <div className="editform">
             <label htmlFor="image">Image:</label>
-            <input type="text" required className="form-control" onChange={handleFieldChange} id="imageURL" value={milestone.imageURL} />
+            <input type="text" required className="form-control" onChange={handleFieldChange} id="image" value={milestone.image} />
 
             <label htmlFor="month">Month:</label>
             <input type="text" required className="form-control" onChange={handleFieldChange} id="month" value={milestone.month} />

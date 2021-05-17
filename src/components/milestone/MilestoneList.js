@@ -28,7 +28,7 @@ export const MilestoneList = () => {
 
         const editMilestoneUpdate= {
             id: updatedMilestone.id,
-            imageURL: updatedMilestone.imageURL,
+            image: updatedMilestone.image,
             month: updatedMilestone.month,
             milestone: updatedMilestone.milestone,
             userId: currentUser

@@ -24,7 +24,7 @@ export const ProfileList = () => {
             id: updatedProfile.id,
             name: updatedProfile.name, 
             dob: updatedProfile.dob, 
-            image: updatedProfile.imageUrl,
+            image: updatedProfile.image,
             userId: currentUser
         }
 

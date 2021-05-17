@@ -71,7 +71,7 @@ return (
 </div>
 <div>
             <label htmlFor= "image"> Image:</label>
-            <input type= "text" required className="form-control" onChange={handleFieldChange} id="image" value={profile.imageUrl} />
+            <input type= "text" required className="form-control" onChange={handleFieldChange} id="image" value={profile.image} />
             </div>
             </div>
 

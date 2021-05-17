@@ -12,6 +12,7 @@ export const ProfileCard = ({profile}) => {
         <div className="profile_card">
             <div className= "profilecard-content">
                 <img className="profilepic" src= {profile.image} alt="profilepic"/>
+                
                 <h3 className="profile_name">Name: {profile.name}</h3>
                 <div className="profile_dob">DOB: {profile.dob}</div>
                 </div>

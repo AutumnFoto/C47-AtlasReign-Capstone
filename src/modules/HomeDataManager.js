@@ -2,8 +2,8 @@ const remoteURL= "http://localhost:8088"
 
 // --------------eat data-------------//
 
-export const getAllEat= () => {
-    return fetch(`${remoteURL}/eat?_expand=user`)
+export const getAllEat= (userId) => {
+    return fetch(`${remoteURL}/eat?userId=${userId}&_expand=user`)
     .then(result=> result.json())
 }
 
@@ -44,8 +44,8 @@ export const updateEat= (editedEat) => {
 
 // ----- sleep data--------//
 
-export const getAllSleep= () => {
-    return fetch(`${remoteURL}/sleep?_expand=user`)
+export const getAllSleep= (userId) => {
+    return fetch(`${remoteURL}/sleep?userId=${userId}&_expand=user`)
     .then(result=> result.json())
 }
 
@@ -85,11 +85,10 @@ export const updateSleep= (editedSleep) => {
 
 // ------diaper data-----------//
 
-export const getAllDiaper= () => {
-    return fetch(`${remoteURL}/diaper?_expand=user`)
+export const getAllDiaper= (userId) => {
+    return fetch(`${remoteURL}/diaper?userId=${userId}&_expand=user`)
     .then(result=> result.json())
 }
-
 
 export const getDiaperbyId = (id) => {
     return fetch(`${remoteURL}/diaper/${id}`)

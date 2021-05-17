@@ -16,9 +16,9 @@ import {SleepEditForm} from "./home/sleep/SleepEditForm";
 import {DiaperList} from "./home/diaper/DiaperList";
 import {DiaperForm} from "./home/diaper/DiaperForm";
 import {DiaperEditForm} from "./home/diaper/DiaperEditForm";
-import { MilestoneList} from "./milestone/MilestoneList";
 import {MilestoneForm} from "./milestone/MilestoneForm";
 import {MilestoneEditForm} from "./milestone/MilestoneEditForm";
+import { MilestoneList} from "./milestone/MilestoneList";
 
 export const ApplicationViews = () => {
 
@@ -38,11 +38,11 @@ export const ApplicationViews = () => {
             </Route>
 
 
-             <Route exact path= "/milestone/create">
+             <Route exact path= "/milestones/create">
                 <MilestoneForm />
             </Route>
 
-            <Route exact path= "/milestone/:milestoneId(\d+)/edit">
+            <Route exact path= "/milestones/:milestoneId(\d+)/edit">
                 <MilestoneEditForm />
             </Route>
 

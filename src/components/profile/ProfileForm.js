@@ -76,7 +76,7 @@ export const ProfileForm = () => {
                     required autoFocus
                     className="form-control"
                     placeholder="image"
-                    value= {profile.imageUrl} />
+                    value= {profile.image} />
                 </div>
             </fieldset>
             <button type= "button" className="save-btn" onClick={handleClickSaveProfile}>SAVE  <FontAwesomeIcon icon={faSave} size="1x" className="save"/></button>

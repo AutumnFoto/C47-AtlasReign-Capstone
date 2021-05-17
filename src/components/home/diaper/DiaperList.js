@@ -9,7 +9,7 @@ const currentUser= JSON.parse(sessionStorage.getItem("atlasreign_id"))
 const [diaper, setDiaper] = useState([]);
 
 const getDiaper= () => {
-    return getAllDiaper()
+    return getAllDiaper(currentUser)
     .then(diaperFromAPI => {
         setDiaper(diaperFromAPI)
     });
@@ -17,7 +17,7 @@ const getDiaper= () => {
 
 const handleDeleteDiaper = id => {
     deleteDiaper(id)
-    .then(() => getAllDiaper()).then(setDiaper)
+    .then(() => getAllDiaper(currentUser)).then(setDiaper)
 }
 
 const handleUpdateDiaper=(diaper) => {
@@ -47,6 +47,7 @@ return (
             
             key={diaper.id}
             diaper={diaper}
+            userId={currentUser}
             handleUpdateDiaper = {handleUpdateDiaper}
             handleDeleteDiaper= {handleDeleteDiaper}
             />   

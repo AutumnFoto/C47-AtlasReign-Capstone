@@ -1,27 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel&display=swap');
 .milestone_card {
-    background-color: #88CED3;
+    background-color: #E0ECE1;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
-    margin-bottom: 1em;
+    margin-top: 3em;
+    margin-bottom: 10px;
     margin-left: 3cm;
-    width: 13cm;
-    height: 5cm;
+    width: 30em;
+    height: 52em;
+    font-family: 'Martel', serif;
+    
    
 }
 
 .container-milestonecards{
     background-color: #FFFBF0;
-    padding: 1px 600px
+    height: 160em;
+    width: 126em;
+    display:flex;
+    flex-wrap: wrap;
+   
 }
 
 .milestonesection-content{
-    background-color: #fffefe
+    background-color: #fffefe;
+   
 }
 
 .delete-btn{
    background-color:#FF8A78;
    color: white;
    justify-self: center;
+  
 
 }
 
@@ -30,3 +40,18 @@
     color: #0c0c0c;
    padding: 3px 194px;
 }
+
+.milestonepic{
+    height: 10em;
+    width: 30em;
+}
+
+.milestone_month{
+    text-align: center;
+}
+
+.milestone_warning{
+
+}
+
+

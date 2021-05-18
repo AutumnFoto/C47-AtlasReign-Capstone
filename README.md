@@ -1,7 +1,7 @@
 # C47-AtlasReign-Capstone
 
 # Atlas Reign
-This app focused on all things Baby! The user will be able to log when their baby eats, sleeps, diapers and activities! The user will also be able to upload articles to their apps for easy rememberance purposes.  
+This app focused on all things Baby! The user will be able to log when their baby eats, sleeps, diapers and activities! The user will also be able to see a Milestone page which will help the user see milestones and red flags to watch out for each month.
 
 ## Motivation
 My motivation for this project is that I am a stay at home mom myself and keeping track of everything my 1.5 year old does, is rough! Having an app to make it simple and everything be in one spot would help so many moms out there. 
